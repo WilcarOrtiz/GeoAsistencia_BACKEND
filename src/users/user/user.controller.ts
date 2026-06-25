@@ -218,7 +218,6 @@ export class UserController {
     return toPaginatedDto(DTO.UserResponseWithRolesDto, result);
   }
 
-  @PublicAccess()
   @RequiredPermissions(PERMISSIONS.DESCARGAR_PLANTILLA_USUARIOS)
   @UseGuards(PermissionsGuard)
   @Get('bulk/template')
